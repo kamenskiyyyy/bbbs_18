@@ -3,7 +3,7 @@ function Header(props) {
     <div>
       <p>This is Header</p>
     </div>
-  )
+  );
 }
 
 export default Header;

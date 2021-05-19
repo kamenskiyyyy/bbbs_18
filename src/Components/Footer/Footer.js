@@ -3,7 +3,7 @@ function Footer(props) {
     <div>
       <p>This is Footer</p>
     </div>
-  )
+  );
 }
 
 export default Footer;
