@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 
-function NavBar({ isNavOpened }) {
+function NavBar({ isNavOpened, openModal }) {
   return (
     <>
       <nav className="header__menu">
@@ -40,10 +40,11 @@ function NavBar({ isNavOpened }) {
 
       <nav className="header__action">
         <NavLink className="header__button-search" to="/search" />
-        <NavLink
-          to="/lk"
+        <button
+          aria-label="Личный кабинет"
+          type="button"
+          onClick={openModal}
           className="header__button-login header__button-login_unauthorized"
-          activeClassName="header__active-link"
         />
       </nav>
 

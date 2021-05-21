@@ -1,5 +1,5 @@
 .popup {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,11 +11,8 @@
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
+    pointer-events: none;
     z-index: 5;
-}
-
-.popup_opened {
-    display: flex;
 }
 
 .popup__button-close {
