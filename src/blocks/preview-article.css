@@ -33,7 +33,6 @@
     letter-spacing: 0.2px;
     color: #224CFF;
     text-decoration: none;
-    z-index: 3;
 }
 
 .preview-article__link:hover {
