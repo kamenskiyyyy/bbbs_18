@@ -107,11 +107,27 @@
     cursor: pointer;
 }
 
+
 .header__button-login {
     width: 30px;
     height: 30px;
     margin: 0;
     margin-left: 40px;
+    padding: 0;
+    border: none;
+    background-image: url("../../src/images/login.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__button-login-mobile {
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    margin-left: 10px;
     padding: 0;
     border: none;
     background-image: url("../../src/images/login.svg");
@@ -349,6 +365,10 @@
         margin-left: 20px;
     }
 
+    .header__button-login-mobile {
+        display: block;
+    }
+
     .header__button-login_search {
         display: block;
     }
@@ -368,6 +388,7 @@
     .header__button-search {
         margin-right: 0;
     }
+
 
     /* селекторы для страницы поиска */
 
@@ -448,4 +469,8 @@
         line-height: 21px;
     }
 
+}
+
+.header__button-login-mobile_close {
+    display: none;
 }

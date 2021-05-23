@@ -46,6 +46,13 @@ function NavBar({ isNavOpened, openModal }) {
           onClick={openModal}
           className="header__button-login header__button-login_unauthorized"
         />
+        <button
+          aria-label="Личный кабинет"
+          type="button"
+          onClick={openModal}
+          className={`header__button-login-mobile header__button-login_unauthorized
+           ${!isNavOpened && 'header__button-login-mobile_close'}`}
+        />
       </nav>
 
       <div className={`header__burger ${isNavOpened && 'header__burger_open'}`}>

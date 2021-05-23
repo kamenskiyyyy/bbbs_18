@@ -25,3 +25,4 @@ function Header({ isNavOpened, onClickNav, openModal }) {
 }
 
 export default Header;
+
