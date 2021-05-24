@@ -3,7 +3,7 @@ import {
   Switch,
   Route,
   useHistory,
-  Redirect,
+  // Redirect,
 } from 'react-router-dom';
 import './App.css';
 import Main from './Components/Main/Main';
@@ -14,6 +14,7 @@ import Lk from './Components/Lk/Lk';
 import { AppContext } from './contexts/AppContext';
 import Search from './Components/Header/Search/Search';
 import Popup from './Components/Popup/PopupAuth';
+import Calendar from './Components/Calendar/Calendar';
 
 function App() {
   /*eslint-disable */
@@ -47,8 +48,13 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route path="/">
+        {/* <Route path="/">
           <Redirect to="/" />
+        </Route> */}
+      </Switch>
+      <Switch>
+      <Route exact path="/calendar">
+          <Calendar />
         </Route>
       </Switch>
       <Footer />
