@@ -38,32 +38,34 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={{ loggedIn }}>
-      <Header isNavOpened={isNavOpened} onClickNav={handleNavClick} openModal={openModal} />
-      <Switch>
-        <ProtectedRoute exact path="/lk" component={Lk} isLoadingUser={isLoadingUser} />
-        <Route path="/search">
-          <Search />
-        </Route>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        {/* <Route path="/">
-          <Redirect to="/" />
-        </Route> */}
-      </Switch>
-      <Switch>
-      <Route exact path="/calendar">
-          <Calendar />
-        </Route>
-      </Switch>
-      <Footer />
+    <body className="root">
+      <AppContext.Provider value={{ loggedIn }}>
+        <Header isNavOpened={isNavOpened} onClickNav={handleNavClick} openModal={openModal} />
+        <Switch>
+          <ProtectedRoute exact path="/lk" component={Lk} isLoadingUser={isLoadingUser} />
+          <Route path="/search">
+            <Search />
+          </Route>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          {/* <Route path="/">
+            <Redirect to="/" />
+          </Route> */}
+        </Switch>
+        <Switch>
+        <Route exact path="/calendar">
+            <Calendar />
+          </Route>
+        </Switch>
+        <Footer />
 
-      <Popup
-        isOpen={modalIsOpen}
-        onClose={closeModal}
-      />
-    </AppContext.Provider>
+        <Popup
+          isOpen={modalIsOpen}
+          onClose={closeModal}
+        />
+      </AppContext.Provider>
+    </body>
   );
 }
 
